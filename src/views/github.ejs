@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Meu perfil Github</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container ">
+
+        <div class="card">
+            <div class="card-body ">
+        
+    
+                <div style="width: 300px;">
+                    <img src="<%= dado.avatar_url %>" class="card-img rounded-circle" alt="...">
+                </div>
+    
+                <h2 class="mt-4"><%= dado.name %></h2>
+                <h4 class="text-black-50"><%= dado.login %></h4>
+                
+                <p style="color: black;">
+                   <strong>
+                        <%= dado.bio %>
+                    </strong>
+    
+                </p>
+               <button type="button" style="width: 300px; color: rgb(77, 72, 72); background-color: rgba(245, 245, 245, 0.603);font-weight: bold;" class="btn btn-outline-secondary rounded">Edit profile</button>
+
+
+    
+                <div class="my-3">
+                  <span><b><%= dado.followers %></b> followers . </span>
+                  <span><b><%= dado.following %></b> following</span>
+                </div>
+
+                 <div>
+                     <span><%= dado.location %></span>
+                 </div>
+            </div>
+        </div>
+        <a href="/" class="btn btn-dark">Procurar outro usuário do GitHub</a>
+    </div>
+
+
+    

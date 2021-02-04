@@ -12,13 +12,15 @@
     <div class="container">
     <div class="card mt-2 mb-2">
         <div class="card-body ">
-            <h5>Resultado Cep</h5>
-              <p><%= dado.logradouro %></p>
-              <p><%= dado.localidade %></p>
-              <p><%= dado.bairro %></p> 
+            <h3 class="mb-5">Resultado do CEP <%= dado.cep %></h3>
+              <p><b>Rua:</b> <%= dado.logradouro %></p>
+              <p><b>Cidade:</b> <%= dado.localidade %></p>
+              <p><b>Bairro:</b> <%= dado.bairro %></p> 
+
+              <img src="https://megacuriosidades.net/wp-content/uploads/2017/01/Springfield.jpg" height="200px" alt="">
         </div>
     </div>
-    <a href="/" class="btn btn-outline-dark">Procurar outro endereço</a>
+    <a href="/" class="btn btn-dark">Procurar outro endereço</a>
 </div>
 
   

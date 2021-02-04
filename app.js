@@ -3,6 +3,7 @@ const app = express()
 const bodyParser = require('body-parser')
 
 const buscaCep = require('./src/functions/buscaCep')
+const buscaGithub = require('./src/functions/buscaGithub')
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
@@ -22,7 +23,12 @@ app.post('/envia-cep', async(req, res) => {
     res.render('resultado',{dado:resultado})
 })
 
+app.post('/meugit', async (req,res) => {
+    const { github } = req.body
+    const resultado = await buscaGithub(github)
+    res.render('github', {dado:resultado})
+  })
+  
 
   
 app.listen(3333)
-
